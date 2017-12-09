@@ -8,7 +8,7 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Menu from './components/Menu/Menu';
-
+import Scrollbar from './components/Scrollbar/Scrollbar';
 import NavButtons from './components/buttons/buttons';
 
 import { Route, Switch } from 'react-router-dom';
@@ -27,8 +27,15 @@ class App extends Component {
         ""
       ],
       current: 1,
-      menu: false
+      menu: false,
+      scroll: 0,
     }
+  }
+
+  onScroll = () => {
+    this.setState({
+      scroll: ++this.state.scroll
+    })
   }
 
   setRoute = current => {
@@ -49,29 +56,39 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App" id="App" onScroll={this.onScroll}>
         <content>
           <Switch>
-            <Route exact path="/" render={() => {
-              return <Landing setRoute={() => this.setRoute(1)} />
-            }}
-              />
-            <Route path="/about" render={() => {
-              return <About setRoute={() => this.setRoute(2)} />
-            }}
-              />
-            <Route path="/skills" render={() => {
-              return <Skills setRoute={() => this.setRoute(3)} />
-            }}
-              />
-            <Route path="/projects" render={() => {
-              return <Projects setRoute={() => this.setRoute(4)} />
-            }}
-              />
-            <Route path="/contact" render={() => {
-              return <Contact setRoute={() => this.setRoute(5)} />
-            }}
-              />
+            <Route
+              exact path="/"
+              render={() => {
+                return <Landing setRoute={() => this.setRoute(1)} previous={this.state.route} />
+              }}
+            />
+            <Route
+              path="/about"
+              render={() => {
+                return <About setRoute={() => this.setRoute(2)} previous={this.state.route} />
+              }}
+            />
+            <Route
+              path="/skills"
+              render={() => {
+                return <Skills setRoute={() => this.setRoute(3)} previous={this.state.route} />
+              }}
+            />
+            <Route
+              path="/projects"
+              render={() => {
+                return <Projects setRoute={() => this.setRoute(4)} previous={this.state.route} />
+              }}
+            />
+            <Route
+              path="/contact"
+              render={() => {
+                return <Contact setRoute={() => this.setRoute(5)} previous={this.state.route} />
+              }}
+            />
           </Switch>
         </content>
         <NavButtons
@@ -82,8 +99,10 @@ class App extends Component {
           open={this.state.menu}
           toggleMenu={this.toggleMenu}
         />
+        <Scrollbar scroll={this.state.scroll} />
         {/*
         <Navbar id="Navbar" scrollTo={this.scrollTo} section={this.state.section} /> */}
+        <bottom id="bottom" />
       </div>
     );
   }

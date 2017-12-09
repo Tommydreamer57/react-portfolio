@@ -1,0 +1,15 @@
+#Scrollbar-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 8px;
+    #scrollbar {
+        position: fixed;
+        right: 0;
+        height: calc(100vh / 3);
+        width: 100%;
+        border-radius: 5px;
+        background: #444;
+    }
+}

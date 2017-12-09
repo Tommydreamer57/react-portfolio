@@ -3,6 +3,9 @@
   border: none;
   outline: 0; }
 
+#NavButtons #menu-button {
+  cursor: pointer; }
+
 #NavButtons .menu-button {
   position: fixed;
   top: 35px;
@@ -22,10 +25,8 @@
     margin: 4px 0;
     transition: margin 0.2s, transform 0.65s, width 0.65s, background-color 0.65s; }
 
-#NavButtons .open-menu:hover {
-  cursor: pointer; }
-  #NavButtons .open-menu:hover div {
-    margin: 7px 0; }
+#NavButtons .open-menu:hover div {
+  margin: 7px 0; }
 
 #NavButtons .close-menu div {
   margin: -1px;

@@ -4,6 +4,9 @@
         border: none;
         outline: 0;
     }
+    #menu-button {
+        cursor: pointer;
+    }
     .menu-button {
         position: fixed;
         top: 35px;
@@ -26,7 +29,6 @@
         }
     }
     .open-menu:hover {
-        cursor: pointer;
         div {
             // margin: -1px;
             margin: 7px 0;

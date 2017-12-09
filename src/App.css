@@ -6,14 +6,32 @@
   right: 0;
   bottom: 0;
   background: #2D2D2D;
-  color: rgba(255, 255, 255, 0.9); }
+  color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column; }
   .App a {
     color: rgba(255, 255, 255, 0.9); }
 
+::-webkit-scrollbar {
+  display: none; }
+
 content {
   margin: 0 150px;
-  width: calc(100vs - 300px);
   border: 1px solid blue; }
+
+#Projects {
+  width: 100%;
+  height: 400vh;
+  background-image: linear-gradient(white, black); }
+
+#About {
+  height: 100vh; }
+
+#Skills {
+  height: calc(100vh + 8px); }
+
+#Contact {
+  height: calc(100vh - 11px); }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;

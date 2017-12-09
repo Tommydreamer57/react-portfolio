@@ -6,6 +6,11 @@ export default class About extends Component {
     constructor(props) {
         super(props)
     }
+    componentWillMount() {
+        if (this.props.previous) {
+            
+        }
+    }
     componentDidMount() {
         this.props.setRoute()
     }
