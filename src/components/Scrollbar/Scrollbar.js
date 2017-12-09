@@ -9,30 +9,37 @@ export default class Srollbar extends Component {
         }
     }
     componentWillReceiveProps(props) {
-        let scrollBottom = document.getElementById('bottom').offsetTop
+        let contentHeight = document.getElementById('bottom').offsetTop
         let scrollTop = document.getElementById('App').scrollTop
         let viewHeight = window.innerHeight
-        let scrollHeight = scrollBottom - scrollTop - viewHeight
-        // console.log(scrollHeight)
 
+        // Height / (ViewHeight - 4) === ViewHeight / ContentHeight
+        // Top / (ViewHeight - 4) === ScrollTop / ContentHeight
+        
         // css height attribute of the scrollbar
-        let height = viewHeight / scrollBottom
+        let height = (viewHeight - 4) * viewHeight / contentHeight
+        // the ' - 4' accounts for padding around the scrollbar
 
         // css top attribute of the scrollbar
-        let top = scrollTop / scrollBottom
-        console.log(top)
+        let top = scrollTop * (viewHeight - 4) / contentHeight + 2
+        // the ' + 2' accounts for padding around the scrollbar
 
-        if (scrollBottom - viewHeight <= 10) {
-            console.log('no scroll')
+        console.log('new props')
+        console.log(height, top)
+        console.log(contentHeight, scrollTop)
+        console.log(viewHeight)
+
+        if (contentHeight - viewHeight <= 10) {
             if (this.state.scroll) {
+                console.log('no scroll')
                 this.setState({
                     scroll: false
                 })
             }
         }
         else {
-            console.log('scroll')
             if (!this.state.scroll) {
+                console.log('scroll')
                 this.setState({
                     scroll: true,
                     height
@@ -53,8 +60,8 @@ export default class Srollbar extends Component {
                         <div
                             id="scrollbar"
                             style={{
-                                height: height * 100 + '%',
-                                top: top * 100 + '%',
+                                height: height + 'px',
+                                top: top + 'px',
                             }}
                         />
                         :

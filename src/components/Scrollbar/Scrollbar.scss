@@ -3,13 +3,14 @@
     top: 0;
     right: 0;
     bottom: 0;
-    width: 8px;
+    width: 12px;
     #scrollbar {
         position: fixed;
-        right: 0;
+        right: 2px;
         height: calc(100vh / 3);
-        width: 100%;
+        width: 8px;
         border-radius: 5px;
         background: #444;
+        z-index: 1;
     }
 }

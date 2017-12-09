@@ -6,10 +6,52 @@
     transition: top 0.8s;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
+    align-items: stretch;
+    z-index: 2;
+    .nav-button {
+        position: relative;
+        font-size: 2rem;
+        padding: 2rem;
+        margin: 0 20vw; 
+        text-align: center;
+        background: rgba(0, 0, 0, 0.1);
+        z-index: 2;
+        overflow: hidden;
+        .slide {
+            background: rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            width: 0;
+            height: 500%;
+            top: -200%;
+            transition: width 0.4s, top 0.4s;
+            position: absolute;
+            transform: rotate(15deg);
+        }
+        .slide-left {
+            position: absolute;
+            left: -33%;
+        }
+        .slide-right {
+            position: absolute;
+            right: -33%;
+            z-index: 2;
+        }
+    }
+    .nav-button:hover {
+        color: white;
+        .slide {
+            width: 100%
+        }
+    }
+    div:hover {
+        color: white;
+    }
+    .selected {
+        color: white; // rgba(255, 255, 255, 0.9);
+    }
     .nav-button:first-of-type {
-        margin-top: 100px;
+        margin-top: 120px;
     }
     .nav-button:last-of-type {
         margin-bottom: 100px;

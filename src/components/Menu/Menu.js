@@ -3,33 +3,34 @@ import { Link } from 'react-router-dom';
 import './Menu.css';
 
 export default function Menu(props) {
+    console.log(props.section)
     return (
         <div id="Menu" className={props.open ? "open" : "closed"}>
-            <div className={props.section === 'Landing' ? 'nav-button selected' : 'nav-button'} onClick={props.toggleMenu} >
-                <Link to="/" >
-                    Landing
-                </Link>
-            </div>
-            <div className={props.section === 'About' ? 'nav-button selected' : 'nav-button'} onClick={props.toggleMenu} >
-                <Link to="/about" >
-                    About
-                </Link>
-            </div>
-            <div className={props.section === 'Skills' ? 'nav-button selected' : 'nav-button'} onClick={props.toggleMenu} >
-                <Link to="/skills" >
-                    Skills
-                </Link>
-            </div>
-            <div className={props.section === 'Projects' ? 'nav-button selected' : 'nav-button'} onClick={props.toggleMenu} >
-                <Link to="/projects" >
-                    Projects
-                </Link>
-            </div>
-            <div className={props.section === 'Contact' ? 'nav-button selected' : 'nav-button'} onClick={props.toggleMenu} >
-                <Link to="/contact" >
-                    Contact
-                </Link>
-            </div>
+            <Link to="/" className={props.section === '/landing' ? 'nav-button selected' : 'nav-button'} onClick={props.toggleMenu} >
+                <div className="slide slide-left" />
+                <div className="slide slide-right" />
+                Home
+            </Link>
+            <Link to="/about" className={props.section === '/about' ? 'nav-button selected' : 'nav-button'} onClick={props.toggleMenu} >
+                <div className="slide slide-left" />
+                <div className="slide slide-right" />
+                About
+            </Link>
+            <Link to="/skills" className={props.section === '/skills' ? 'nav-button selected' : 'nav-button'} onClick={props.toggleMenu} >
+                <div className="slide slide-left" />
+                <div className="slide slide-right" />
+                Skills
+            </Link>
+            <Link to="/projects" className={props.section === '/projects' ? 'nav-button selected' : 'nav-button'} onClick={props.toggleMenu} >
+                <div className="slide slide-left" />
+                <div className="slide slide-right" />
+                Projects
+            </Link>
+            <Link to="/contact" className={props.section === '/contact' ? 'nav-button selected' : 'nav-button'} onClick={props.toggleMenu} >
+                <div className="slide slide-left" />
+                <div className="slide slide-right" />
+                Contact
+            </Link>
         </div>
     )
 }

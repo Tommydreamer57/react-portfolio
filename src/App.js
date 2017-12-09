@@ -96,6 +96,7 @@ class App extends Component {
           open={this.state.menu}
           toggleMenu={this.toggleMenu} />
         <Menu
+          section={this.state.routes[this.state.current]}
           open={this.state.menu}
           toggleMenu={this.toggleMenu}
         />

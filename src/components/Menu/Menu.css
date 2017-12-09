@@ -6,10 +6,44 @@
   transition: top 0.8s;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center; }
+  justify-content: center;
+  align-items: stretch;
+  z-index: 2; }
+  #Menu .nav-button {
+    position: relative;
+    font-size: 2rem;
+    padding: 2rem;
+    margin: 0 20vw;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    overflow: hidden; }
+    #Menu .nav-button .slide {
+      background: rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      width: 0;
+      height: 500%;
+      top: -200%;
+      transition: width 0.4s, top 0.4s;
+      position: absolute;
+      transform: rotate(15deg); }
+    #Menu .nav-button .slide-left {
+      position: absolute;
+      left: -33%; }
+    #Menu .nav-button .slide-right {
+      position: absolute;
+      right: -33%;
+      z-index: 2; }
+  #Menu .nav-button:hover {
+    color: white; }
+    #Menu .nav-button:hover .slide {
+      width: 100%; }
+  #Menu div:hover {
+    color: white; }
+  #Menu .selected {
+    color: white; }
   #Menu .nav-button:first-of-type {
-    margin-top: 100px; }
+    margin-top: 120px; }
   #Menu .nav-button:last-of-type {
     margin-bottom: 100px; }
 
