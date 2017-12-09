@@ -7,6 +7,8 @@
   bottom: 0;
   background: #2D2D2D;
   color: rgba(255, 255, 255, 0.9); }
+  .App a {
+    color: rgba(255, 255, 255, 0.9); }
 
 content {
   margin: 0 150px;

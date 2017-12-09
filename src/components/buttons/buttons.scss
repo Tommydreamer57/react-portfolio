@@ -22,7 +22,7 @@
             height: 2px;
             width: 45px;
             margin: 4px 0;
-            transition: margin 0.2s, transform 0.5s, width 0.5s;
+            transition: margin 0.2s, transform 0.65s, width 0.65s, background-color 0.65s;
         }
     }
     .open-menu:hover {
@@ -31,12 +31,6 @@
             // margin: -1px;
             margin: 7px 0;
             // width: 50px;
-        }
-        #menu-one, #menu-three {
-            // transform: rotate(-45deg);
-        }
-        #menu-two {
-            // transform: rotate(45deg);
         }
     }
 
@@ -48,6 +42,7 @@
         }
         #menu-one, #menu-three {
             transform: rotate(225deg);
+            background: rgba(255, 255, 255, 0.2)
         }
         #menu-two {
             transform: rotate(-225deg);
@@ -56,10 +51,10 @@
 
     .close-menu:hover {
         #menu-one, #menu-three {
-            transform: rotate(235deg);
+            transform: rotate(232deg);
         }
         #menu-two {
-            transform: rotate(-235deg);
+            transform: rotate(-232deg);
         }
     }
 

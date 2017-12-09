@@ -2,8 +2,18 @@
     height: 100vh;
     width: 100vw;
     position: fixed;
-    background: blue;
+    background: #333;
     transition: top 0.8s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    .nav-button:first-of-type {
+        margin-top: 100px;
+    }
+    .nav-button:last-of-type {
+        margin-bottom: 100px;
+    }
 }
 
 .closed {

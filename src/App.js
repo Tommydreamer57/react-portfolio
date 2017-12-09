@@ -80,6 +80,7 @@ class App extends Component {
           toggleMenu={this.toggleMenu} />
         <Menu
           open={this.state.menu}
+          toggleMenu={this.toggleMenu}
         />
         {/*
         <Navbar id="Navbar" scrollTo={this.scrollTo} section={this.state.section} /> */}
