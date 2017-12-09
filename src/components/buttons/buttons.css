@@ -1,0 +1,92 @@
+#NavButtons button {
+  background: transparent;
+  border: none; }
+
+#NavButtons #menu-button {
+  position: fixed;
+  top: 35px;
+  right: 50px;
+  height: 60px;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  #NavButtons #menu-button div {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 2px;
+    height: 2px;
+    width: 45px;
+    margin: 4px 0;
+    transition: margin 0.2s, transform 0.2s, width 0.2s; }
+
+#NavButtons #menu-button:hover {
+  cursor: pointer; }
+  #NavButtons #menu-button:hover div {
+    margin: -1px; }
+  #NavButtons #menu-button:hover #menu-one, #NavButtons #menu-button:hover #menu-three {
+    transform: rotate(-45deg); }
+  #NavButtons #menu-button:hover #menu-two {
+    transform: rotate(45deg); }
+
+#NavButtons .arrow {
+  position: fixed;
+  top: 33vh;
+  bottom: 33vh;
+  width: 70px;
+  margin: 40px; }
+  #NavButtons .arrow a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s; }
+  #NavButtons .arrow div {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 2px;
+    height: 2px;
+    width: 30px;
+    margin: 9px 0;
+    transition: margin 0.2s, transform 0.2s, width 0.2s, left 0.5s, right 0.5s; }
+
+#NavButtons .left {
+  left: 0; }
+  #NavButtons .left div {
+    transform: rotate(135deg); }
+  #NavButtons .left div + div {
+    transform: rotate(-135deg); }
+
+#NavButtons .left:hover a {
+  transform: translateX(-3px); }
+
+#NavButtons .left:hover div {
+  margin: 11px;
+  transform: rotate(120deg); }
+
+#NavButtons .left:hover div + div {
+  transform: rotate(-120deg); }
+
+#NavButtons .right {
+  right: 0; }
+  #NavButtons .right div {
+    transform: rotate(-135deg); }
+  #NavButtons .right div + div {
+    transform: rotate(135deg); }
+
+#NavButtons .right:hover a {
+  transform: translateX(3px); }
+
+#NavButtons .right:hover div {
+  margin: 11px;
+  transform: rotate(-120deg); }
+
+#NavButtons .right:hover div + div {
+  transform: rotate(120deg); }
+
+#NavButtons .left-away {
+  left: -100px; }
+
+#NavButtons .right-away {
+  right: -100px; }

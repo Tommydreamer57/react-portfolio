@@ -1,0 +1,112 @@
+#NavButtons {
+    button {
+        background: transparent;
+        border: none;
+    }
+    #menu-button {
+        position: fixed;
+        top: 35px;
+        right: 50px;
+        height: 60px;
+        width: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        div {
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 2px;
+            height: 2px;
+            width: 45px;
+            margin: 4px 0;
+            transition: margin 0.2s, transform 0.2s, width 0.2s;
+        }
+    }
+    #menu-button:hover {
+        cursor: pointer;
+        div {
+            margin: -1px;
+            // margin: 6px 0;
+            // width: 50px;
+        }
+        #menu-one, #menu-three {
+            transform: rotate(-45deg);
+        }
+        #menu-two {
+            transform: rotate(45deg);
+        }
+    }
+    .arrow {
+        position: fixed;
+        top: 33vh;
+        bottom: 33vh;
+        width: 70px;
+        margin: 40px;
+        a {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.2s;
+        }
+        div {
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 2px;
+            height: 2px;
+            width: 30px;
+            margin: 9px 0;
+            transition: margin 0.2s, transform 0.2s, width 0.2s, left 0.5s, right 0.5s;
+            }
+    }
+    .left {
+        left: 0;
+        div {
+            transform: rotate(135deg);
+        }
+        div + div {
+            transform: rotate(-135deg);
+        }
+    }
+    .left:hover {
+        a {
+            transform: translateX(-3px); 
+        }
+        div {
+            margin: 11px;
+            transform: rotate(120deg);
+        }
+        div + div {
+            transform: rotate(-120deg);
+        }
+    }
+    .right {
+        right: 0;
+        div {
+            transform: rotate(-135deg);
+        }
+        div + div {
+            transform: rotate(135deg);
+        }
+    }
+    .right:hover {
+        a {
+            transform: translateX(3px); 
+        }
+        div {
+            margin: 11px;
+            transform: rotate(-120deg);
+        }
+        div + div {
+            transform: rotate(120deg);
+        }
+    }
+    .left-away {
+        left: -100px;
+    }
+    .right-away {
+        right: -100px;
+    }
+}

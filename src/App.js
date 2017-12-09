@@ -9,7 +9,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
 
-import NavButtons from './components/buttons';
+import NavButtons from './components/buttons/buttons';
 
 import { Route, Switch } from 'react-router-dom';
 
@@ -17,7 +17,24 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
+      routes: [
+        "",
+        "/",
+        "/about",
+        "/skills",
+        "/projects",
+        "/contact",
+        ""
+      ],
+      current: 1
+    }
+  }
 
+  setRoute = current => {
+    if (current !== this.state.current) {
+      this.setState({
+        current
+      })
     }
   }
 
@@ -26,15 +43,36 @@ class App extends Component {
       <div className="App">
         <content>
           <Switch>
-            <Route exact path="/" component={Landing} />
-            <Route path="/about" component={About} />
-            <Route path="/skills" component={Skills} />
-            <Route path="/projects" component={Projects} />
-            <Route path="/contact" component={Contact} />
+            <Route exact path="/" render={() => {
+              this.setRoute(1)
+              return <Landing />
+            }}
+              />
+            <Route path="/about" render={() => {
+              this.setRoute(2)
+              return <About />
+            }}
+              />
+            <Route path="/skills" render={() => {
+              this.setRoute(3)
+              return <Skills />
+            }}
+              />
+            <Route path="/projects" render={() => {
+              this.setRoute(4)
+              return <Projects />
+            }}
+              />
+            <Route path="/contact" render={() => {
+              this.setRoute(5)
+              return <Contact />
+            }}
+              />
           </Switch>
         </content>
-        <NavButtons />
-        <Navbar id="Navbar" scrollTo={this.scrollTo} section={this.state.section} />
+        <NavButtons current={this.state.current} />
+        {/*
+        <Navbar id="Navbar" scrollTo={this.scrollTo} section={this.state.section} /> */}
       </div>
     );
   }
