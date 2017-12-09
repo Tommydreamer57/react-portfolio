@@ -21,12 +21,12 @@
         .slide {
             background: rgba(0, 0, 0, 0.2);
             z-index: 1;
-            width: 0;
+            width: 100%; // change back to 0 after editing
             height: 500%;
             top: -200%;
             transition: width 0.4s, top 0.4s;
             position: absolute;
-            transform: rotate(15deg);
+            transform: rotate(20deg);
         }
         .slide-left {
             position: absolute;
@@ -37,15 +37,17 @@
             right: -33%;
             z-index: 2;
         }
-    }
-    .nav-button:hover {
-        color: white;
-        .slide {
-            width: 100%
+        .nav-text {
+            z-index: 4;
         }
     }
-    div:hover {
-        color: white;
+    .nav-button:hover {
+        .nav-text {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .slide {
+            width: 50%; // 100%
+        }
     }
     .selected {
         color: white; // rgba(255, 255, 255, 0.9);
