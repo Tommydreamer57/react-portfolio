@@ -7,7 +7,7 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
-import Navbar from './components/Navbar';
+import Menu from './components/Menu/Menu';
 
 import NavButtons from './components/buttons/buttons';
 
@@ -26,7 +26,8 @@ class App extends Component {
         "/contact",
         ""
       ],
-      current: 1
+      current: 1,
+      menu: false
     }
   }
 
@@ -38,39 +39,48 @@ class App extends Component {
     }
   }
 
+  toggleMenu = () => {
+    console.log(this.state.menu)
+    let menu = !this.state.menu
+    this.setState({
+      menu
+    })
+  }
+
   render() {
     return (
       <div className="App">
         <content>
           <Switch>
             <Route exact path="/" render={() => {
-              this.setRoute(1)
-              return <Landing />
+              return <Landing setRoute={() => this.setRoute(1)} />
             }}
               />
             <Route path="/about" render={() => {
-              this.setRoute(2)
-              return <About />
+              return <About setRoute={() => this.setRoute(2)} />
             }}
               />
             <Route path="/skills" render={() => {
-              this.setRoute(3)
-              return <Skills />
+              return <Skills setRoute={() => this.setRoute(3)} />
             }}
               />
             <Route path="/projects" render={() => {
-              this.setRoute(4)
-              return <Projects />
+              return <Projects setRoute={() => this.setRoute(4)} />
             }}
               />
             <Route path="/contact" render={() => {
-              this.setRoute(5)
-              return <Contact />
+              return <Contact setRoute={() => this.setRoute(5)} />
             }}
               />
           </Switch>
         </content>
-        <NavButtons current={this.state.current} />
+        <NavButtons
+          current={this.state.current}
+          open={this.state.menu}
+          toggleMenu={this.toggleMenu} />
+        <Menu
+          open={this.state.menu}
+        />
         {/*
         <Navbar id="Navbar" scrollTo={this.scrollTo} section={this.state.section} /> */}
       </div>

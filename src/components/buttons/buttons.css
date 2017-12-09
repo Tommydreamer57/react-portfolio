@@ -1,8 +1,9 @@
 #NavButtons button {
   background: transparent;
-  border: none; }
+  border: none;
+  outline: 0; }
 
-#NavButtons #menu-button {
+#NavButtons .menu-button {
   position: fixed;
   top: 35px;
   right: 50px;
@@ -11,30 +12,44 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
-  #NavButtons #menu-button div {
+  align-items: center;
+  z-index: 1; }
+  #NavButtons .menu-button div {
     background: rgba(255, 255, 255, 0.4);
     border-radius: 2px;
     height: 2px;
     width: 45px;
     margin: 4px 0;
-    transition: margin 0.2s, transform 0.2s, width 0.2s; }
+    transition: margin 0.2s, transform 0.5s, width 0.5s; }
 
-#NavButtons #menu-button:hover {
+#NavButtons .open-menu:hover {
   cursor: pointer; }
-  #NavButtons #menu-button:hover div {
-    margin: -1px; }
-  #NavButtons #menu-button:hover #menu-one, #NavButtons #menu-button:hover #menu-three {
-    transform: rotate(-45deg); }
-  #NavButtons #menu-button:hover #menu-two {
-    transform: rotate(45deg); }
+  #NavButtons .open-menu:hover div {
+    margin: 7px 0; }
+
+#NavButtons .close-menu div {
+  margin: -1px;
+  width: 60px; }
+
+#NavButtons .close-menu #menu-one, #NavButtons .close-menu #menu-three {
+  transform: rotate(225deg); }
+
+#NavButtons .close-menu #menu-two {
+  transform: rotate(-225deg); }
+
+#NavButtons .close-menu:hover #menu-one, #NavButtons .close-menu:hover #menu-three {
+  transform: rotate(235deg); }
+
+#NavButtons .close-menu:hover #menu-two {
+  transform: rotate(-235deg); }
 
 #NavButtons .arrow {
   position: fixed;
-  top: 33vh;
-  bottom: 33vh;
-  width: 70px;
-  margin: 40px; }
+  top: 25vh;
+  bottom: 25vh;
+  width: 90px;
+  margin: 30px;
+  padding: 0; }
   #NavButtons .arrow a {
     width: 100%;
     height: 100%;
@@ -59,7 +74,7 @@
     transform: rotate(-135deg); }
 
 #NavButtons .left:hover a {
-  transform: translateX(-3px); }
+  transform: translateX(-6px); }
 
 #NavButtons .left:hover div {
   margin: 11px;
@@ -76,7 +91,7 @@
     transform: rotate(135deg); }
 
 #NavButtons .right:hover a {
-  transform: translateX(3px); }
+  transform: translateX(6px); }
 
 #NavButtons .right:hover div {
   margin: 11px;

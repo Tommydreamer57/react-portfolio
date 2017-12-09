@@ -22,7 +22,7 @@ export default class NavButtons extends Component {
 
         return (
             <div id="NavButtons">
-                <button id="menu-button">
+                <button id="menu-button" className={this.props.open ? "menu-button close-menu" : "menu-button open-menu"} onClick={this.props.toggleMenu}>
                     <div id="menu-one" />
                     <div id="menu-two" />
                     <div id="menu-three" />

@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
-import Navbar from './Navbar';
-import NavButtons from './buttons/buttons';
+// import Navbar from './Navbar';
+// import NavButtons from './buttons/buttons';
 
 export default class About extends Component {
     constructor(props) {
         super(props)
+    }
+    componentDidMount() {
+        this.props.setRoute()
     }
     render() {
         return (
             <div className="About" id="About">
                 About
                 {/* <NavButtons current={2} /> */}
-                <Navbar id="Navbar"  />
+                {/* <Navbar id="Navbar"  /> */}
             </div>
         )
     }

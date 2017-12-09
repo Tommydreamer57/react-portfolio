@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-// import Scroll from 'react-scroll-to-element';
 import { Link } from 'react-router-dom';
+import './Menu.css';
 
-export default function Navbar(props) {
+export default function Menu(props) {
+    console.log(props)
+    console.log(props.open)
     return (
-        <div className="Navbar">
+        <div id="Menu" className={props.open ? "open" : "closed"}>
             <Link to="/" className={props.section === 'Landing' ? 'nav-button selected' : 'nav-button'}>
                 Landing
             </Link>
