@@ -11,8 +11,8 @@ export default class Skills extends Component {
     }
     render() {
         return (
-            <div className="Skills" id="Skills">
-                Skills
+            <div className="content" id="Skills">
+                <h1>Skills</h1>
                 {/* <NavButtons current={3} /> */}
                 {/* <Navbar id="Navbar" /> */}
             </div>

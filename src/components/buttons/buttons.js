@@ -9,7 +9,7 @@ export default class NavButtons extends Component {
             routes: [
                 "",
                 "/",
-                "/about",
+                // "/about",
                 "/skills",
                 "/projects",
                 "/contact",
@@ -33,7 +33,7 @@ export default class NavButtons extends Component {
                         <div id="left-bottom" />
                     </Link>
                 </button>
-                <button className={this.props.current < 5 ? "arrow right" : "arrow right right-away"}>
+                <button className={this.props.current < 4 ? "arrow right" : "arrow right right-away"}>
                     <Link to={this.state.routes[this.props.current + 1]} >
                         <div id="right-top" />
                         <div id="right-bottom" />

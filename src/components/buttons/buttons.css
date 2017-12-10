@@ -23,7 +23,7 @@
     height: 2px;
     width: 45px;
     margin: 4px 0;
-    transition: margin 0.4s cubic-bezier(0.65, 0.15, 0, 1), transform 0.8s cubic-bezier(0.65, 0.15, 0, 1), width 0.8s, background-color 0.8s; }
+    transition: margin 0.6s cubic-bezier(0.65, 0.15, 0, 1), transform 0.8s cubic-bezier(0.65, 0.15, 0, 1), width 0.8s, background-color 0.8s; }
 
 #NavButtons .open-menu:hover div {
   margin: 7px 0; }
@@ -33,17 +33,17 @@
   width: 60px; }
 
 #NavButtons .close-menu #menu-one, #NavButtons .close-menu #menu-three {
-  transform: rotate(225deg);
+  transform: rotate(-135deg);
   background: rgba(255, 255, 255, 0.2); }
 
 #NavButtons .close-menu #menu-two {
-  transform: rotate(-225deg); }
+  transform: rotate(135deg); }
 
 #NavButtons .close-menu:hover #menu-one, #NavButtons .close-menu:hover #menu-three {
-  transform: rotate(232deg); }
+  transform: rotate(-128deg); }
 
 #NavButtons .close-menu:hover #menu-two {
-  transform: rotate(-232deg); }
+  transform: rotate(128deg); }
 
 #NavButtons .arrow {
   position: fixed;

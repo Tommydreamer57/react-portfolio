@@ -11,8 +11,8 @@ export default class Projects extends Component {
     }
     render() {
         return (
-            <div className="Projects" id="Projects">
-                Projects
+            <div className="content" id="Projects">
+                <h1>Projects</h1>
                 {/* <NavButtons current={4} /> */}
                 {/* <Navbar id="Navbar" /> */}
             </div>

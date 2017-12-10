@@ -20,7 +20,7 @@ class App extends Component {
       routes: [
         "",
         "/",
-        "/about",
+        // "/about",
         "/skills",
         "/projects",
         "/contact",
@@ -59,34 +59,34 @@ class App extends Component {
       <div className="App" id="App" onScroll={this.onScroll}>
         <content>
           <Switch>
-            <Route
+            {/* <Route
               exact path="/"
               render={() => {
                 return <Landing setRoute={() => this.setRoute(1)} previous={this.state.route} />
               }}
-            />
-            <Route
-              path="/about"
+            /> */}
+            <Route exact
+              path="/"
               render={() => {
-                return <About setRoute={() => this.setRoute(2)} previous={this.state.route} />
+                return <About setRoute={() => this.setRoute(1)} previous={this.state.route} />
               }}
             />
             <Route
               path="/skills"
               render={() => {
-                return <Skills setRoute={() => this.setRoute(3)} previous={this.state.route} />
+                return <Skills setRoute={() => this.setRoute(2)} previous={this.state.route} />
               }}
             />
             <Route
               path="/projects"
               render={() => {
-                return <Projects setRoute={() => this.setRoute(4)} previous={this.state.route} />
+                return <Projects setRoute={() => this.setRoute(3)} previous={this.state.route} />
               }}
             />
             <Route
               path="/contact"
               render={() => {
-                return <Contact setRoute={() => this.setRoute(5)} previous={this.state.route} />
+                return <Contact setRoute={() => this.setRoute(4)} previous={this.state.route} />
               }}
             />
           </Switch>

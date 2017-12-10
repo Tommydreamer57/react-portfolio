@@ -11,8 +11,8 @@ export default class Contact extends Component {
     }
     render() {
         return (
-            <div className="Contact" id="Contact">
-                Contact
+            <div className="content" id="Contact">
+                <h1>Contact</h1>
                 {/* <NavButtons current={5} /> */}
                 {/* <Navbar id="Navbar" /> */}
             </div>
