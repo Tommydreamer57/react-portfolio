@@ -103,7 +103,7 @@ class App extends Component {
         <Scrollbar scroll={this.state.scroll} />
         {/*
         <Navbar id="Navbar" scrollTo={this.scrollTo} section={this.state.section} /> */}
-        <bottom id="bottom" />
+        <div id="bottom" />
       </div>
     );
   }

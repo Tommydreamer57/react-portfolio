@@ -22,25 +22,46 @@
 
 content {
   margin: 0 150px;
-  border: 1px solid blue;
+  background: #999;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; // center;
+    justify-content: flex-start;
+    margin: 95px 8vw;
+    h1 {
+        font-size: 3rem;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+        color: rgba(255, 255, 255, 0.6);
+        margin-bottom: 1.5rem;
+    }
+    p {
+        font-size: 1.175rem;
+        color: rgba(255, 255, 255, 0.4);
+        line-height: 125%;
+    }
 }
 
 #Projects {
-    width: 100%;
-    height: 400vh;
-    background-image: linear-gradient(white, black)
+    background: #555;
 }
 
 #About {
-    height: 285vh;
+    background: #666;
 }
 
 #Skills {
-    height: calc(100vh + 8px);
+    background: #777;
 }
 
 #Contact {
-    height: calc(100vh - 11px);
+    background: #888;
 }
 
 .App-logo {
