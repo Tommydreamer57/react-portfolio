@@ -25,7 +25,7 @@
             height: 2px;
             width: 45px;
             margin: 4px 0;
-            transition: margin 0.2s, transform 0.65s, width 0.65s, background-color 0.65s;
+            transition: margin 0.8s cubic-bezier(.65,.15,0,1), transform 0.8s cubic-bezier(.65,.15,0,1), width 0.8s, background-color 0.8s;
         }
     }
     .open-menu:hover {
@@ -75,7 +75,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            transition: transform 0.2s;
+            transition: transform 0.3s cubic-bezier(.65,.15,0,1);
         }
         div {
             background: rgba(255, 255, 255, 0.4);
@@ -83,7 +83,7 @@
             height: 2px;
             width: 30px;
             margin: 9px 0;
-            transition: margin 0.2s, transform 0.2s, width 0.2s, left 0.5s, right 0.5s;
+            transition: margin 0.3s cubic-bezier(.65,.15,0,1), transform 0.3s cubic-bezier(.65,.15,0,1), width 0.3s, left 0.5s, right 0.5s cubic-bezier(.65,.15,0,1);
             }
     }
     .left {
@@ -97,7 +97,7 @@
     }
     .left:hover {
         a {
-            transform: translateX(-6px); // 3 breaks even 
+            transform: translateX(-3px); // 3 breaks even 
         }
         div {
             margin: 11px;
@@ -118,7 +118,7 @@
     }
     .right:hover {
         a {
-            transform: translateX(6px); 
+            transform: translateX(3px); 
         }
         div {
             margin: 11px;

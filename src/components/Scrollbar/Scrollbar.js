@@ -24,10 +24,10 @@ export default class Srollbar extends Component {
         let top = scrollTop * (viewHeight - 4) / contentHeight + 2
         // the ' + 2' accounts for padding around the scrollbar
 
-        console.log('new props')
-        console.log(height, top)
-        console.log(contentHeight, scrollTop)
-        console.log(viewHeight)
+        // console.log('new props')
+        // console.log(height, top)
+        // console.log(contentHeight, scrollTop)
+        // console.log(viewHeight)
 
         if (contentHeight - viewHeight <= 10) {
             if (this.state.scroll) {

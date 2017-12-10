@@ -23,7 +23,7 @@
     height: 2px;
     width: 45px;
     margin: 4px 0;
-    transition: margin 0.2s, transform 0.65s, width 0.65s, background-color 0.65s; }
+    transition: margin 0.8s cubic-bezier(0.65, 0.15, 0, 1), transform 0.8s cubic-bezier(0.65, 0.15, 0, 1), width 0.8s, background-color 0.8s; }
 
 #NavButtons .open-menu:hover div {
   margin: 7px 0; }
@@ -59,14 +59,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: transform 0.2s; }
+    transition: transform 0.3s cubic-bezier(0.65, 0.15, 0, 1); }
   #NavButtons .arrow div {
     background: rgba(255, 255, 255, 0.4);
     border-radius: 2px;
     height: 2px;
     width: 30px;
     margin: 9px 0;
-    transition: margin 0.2s, transform 0.2s, width 0.2s, left 0.5s, right 0.5s; }
+    transition: margin 0.3s cubic-bezier(0.65, 0.15, 0, 1), transform 0.3s cubic-bezier(0.65, 0.15, 0, 1), width 0.3s, left 0.5s, right 0.5s cubic-bezier(0.65, 0.15, 0, 1); }
 
 #NavButtons .left {
   left: 0; }
@@ -76,7 +76,7 @@
     transform: rotate(-135deg); }
 
 #NavButtons .left:hover a {
-  transform: translateX(-6px); }
+  transform: translateX(-3px); }
 
 #NavButtons .left:hover div {
   margin: 11px;
@@ -93,7 +93,7 @@
     transform: rotate(135deg); }
 
 #NavButtons .right:hover a {
-  transform: translateX(6px); }
+  transform: translateX(3px); }
 
 #NavButtons .right:hover div {
   margin: 11px;

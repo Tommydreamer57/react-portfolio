@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 import './Menu.css';
 
 export default function Menu(props) {
-    console.log(props.section)
+    // console.log(props.section)
     return (
         <div id="Menu" className={props.open ? "open" : "closed"}>
 
 
 
-            <Link to="/" className={props.section === '/landing' ? 'nav-button selected' : 'nav-button'} onClick={props.toggleMenu} >
+            <Link to="/" className={props.section === '/' ? 'nav-button selected' : 'nav-button'} onClick={props.toggleMenu} >
                 <div className="slide slide-left" />
                 <div className="slide slide-right" />
                 <div className="nav-text">Home</div>
