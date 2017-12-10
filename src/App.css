@@ -16,6 +16,7 @@
   display: none; }
 
 content {
+  position: relative;
   margin: 0 150px;
   background: #999; }
 
@@ -24,7 +25,8 @@ content {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  margin: 95px 8vw; }
+  padding: 95px 8vw;
+  width: calc(100% - 16vw); }
   .content h1 {
     font-size: 3rem;
     color: rgba(255, 255, 255, 0.8);
@@ -38,17 +40,25 @@ content {
     color: rgba(255, 255, 255, 0.4);
     line-height: 125%; }
 
-#Projects {
-  background: #555; }
-
 #About {
-  background: #666; }
+  background: #555;
+  position: absolute;
+  transition: left 1s cubic-bezier(0.65, 0.15, 1); }
 
 #Skills {
-  background: #777; }
+  background: #666;
+  position: absolute;
+  transition: left 1s cubic-bezier(0.65, 0.15, 1); }
+
+#Projects {
+  background: #777;
+  position: absolute;
+  transition: left 1s cubic-bezier(0.65, 0.15, 1); }
 
 #Contact {
-  background: #888; }
+  background: #888;
+  position: absolute;
+  transition: left 1s cubic-bezier(0.65, 0.15, 1); }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;

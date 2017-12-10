@@ -6,12 +6,9 @@ export default class Skills extends Component {
     constructor(props) {
         super(props)
     }
-    componentDidMount() {
-        this.props.setRoute()
-    }
     render() {
         return (
-            <div className="content" id="Skills">
+            <div className="content" id="Skills" style={this.props.style}>
                 <h1>Skills</h1>
                 {/* <NavButtons current={3} /> */}
                 {/* <Navbar id="Navbar" /> */}

@@ -6,12 +6,9 @@ export default class Projects extends Component {
     constructor(props) {
         super(props)
     }
-    componentDidMount() {
-        this.props.setRoute()
-    }
     render() {
         return (
-            <div className="content" id="Projects">
+            <div className="content" id="Projects" style={this.props.style}>
                 <h1>Projects</h1>
                 {/* <NavButtons current={4} /> */}
                 {/* <Navbar id="Navbar" /> */}

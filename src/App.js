@@ -29,6 +29,16 @@ class App extends Component {
       current: 1,
       menu: false,
       scroll: 0,
+      // styles
+      previous: {
+        left: "calc(-100vw + 150px)"
+      },
+      selected: {
+        left: 0
+      },
+      next: {
+        left: "calc(100vw - 150px)"
+      }
     }
   }
 
@@ -55,41 +65,22 @@ class App extends Component {
   }
 
   render() {
+    let { previous, selected, next } = this.state
     return (
       <div className="App" id="App" onScroll={this.onScroll}>
         <content>
-          <Switch>
-            {/* <Route
-              exact path="/"
-              render={() => {
-                return <Landing setRoute={() => this.setRoute(1)} previous={this.state.route} />
-              }}
-            /> */}
-            <Route exact
-              path="/"
-              render={() => {
-                return <About setRoute={() => this.setRoute(1)} previous={this.state.route} />
-              }}
-            />
-            <Route
-              path="/skills"
-              render={() => {
-                return <Skills setRoute={() => this.setRoute(2)} previous={this.state.route} />
-              }}
-            />
-            <Route
-              path="/projects"
-              render={() => {
-                return <Projects setRoute={() => this.setRoute(3)} previous={this.state.route} />
-              }}
-            />
-            <Route
-              path="/contact"
-              render={() => {
-                return <Contact setRoute={() => this.setRoute(4)} previous={this.state.route} />
-              }}
-            />
-          </Switch>
+          <About
+            style={previous}
+          />
+          <Skills
+            style={selected}
+          />
+          <Projects
+            style={next}
+          />
+          <Contact
+            style={next}
+          />
         </content>
         <NavButtons
           current={this.state.current}
@@ -101,8 +92,6 @@ class App extends Component {
           toggleMenu={this.toggleMenu}
         />
         <Scrollbar scroll={this.state.scroll} />
-        {/*
-        <Navbar id="Navbar" scrollTo={this.scrollTo} section={this.state.section} /> */}
         <div id="bottom" />
       </div>
     );

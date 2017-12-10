@@ -6,12 +6,9 @@ export default class Contact extends Component {
     constructor(props) {
         super(props)
     }
-    componentDidMount() {
-        this.props.setRoute()
-    }
     render() {
         return (
-            <div className="content" id="Contact">
+            <div className="content" id="Contact" style={this.props.style}>
                 <h1>Contact</h1>
                 {/* <NavButtons current={5} /> */}
                 {/* <Navbar id="Navbar" /> */}
