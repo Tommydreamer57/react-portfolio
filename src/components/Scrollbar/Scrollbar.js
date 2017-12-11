@@ -6,6 +6,7 @@ export default class Srollbar extends Component {
         super(props)
         this.state = {
             scroll: false,
+            background: "#444",
             height: 0,
             top: 0,
             contentHeight: 0,
@@ -91,7 +92,7 @@ export default class Srollbar extends Component {
         })
     }
     render = () => {
-        let { height, top } = this.state
+        let { height, top, background } = this.state
         // console.log(this.state)
         return (
             <div id="Scrollbar-wrapper">
@@ -102,6 +103,7 @@ export default class Srollbar extends Component {
                             style={{
                                 height: height + 'px',
                                 top: top + 'px',
+                                background
                             }}
                         />
                         :

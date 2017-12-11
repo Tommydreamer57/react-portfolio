@@ -85,7 +85,7 @@ class App extends Component {
           open={this.state.menu}
           toggleMenu={this.toggleMenu}
         />
-        <Scrollbar scroll={this.state.scroll} />
+        <Scrollbar />
         <div id="bottom" />
       </div>
     );

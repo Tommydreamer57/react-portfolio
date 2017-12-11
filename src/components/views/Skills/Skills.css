@@ -1,0 +1,39 @@
+@import url("https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css");
+#Skills .skills-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem; }
+
+#Skills .skills-section {
+  width: 100%;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  align-items: center; }
+
+#Skills .skill {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 6rem;
+  width: 5rem;
+  margin: 1rem 3rem;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.3s; }
+  #Skills .skill h3 {
+    transition: font-size 0.3s; }
+  #Skills .skill i {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    transition: font-size 0.3s; }
+
+#Skills .skill:hover {
+  color: white; }
+  #Skills .skill:hover h3 {
+    font-size: 1.75rem; }
+  #Skills .skill:hover i {
+    font-size: 3.25rem; }

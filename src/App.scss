@@ -22,7 +22,7 @@
 
 content {
   margin: 0 150px;
-  background: #999;
+//   background: #999;
 }
 
 .content {
@@ -37,6 +37,11 @@ content {
         margin-bottom: 2rem;
     }
     h2 {
+        font-size: 2rem;
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 1.5rem;
+    }
+    h3 {
         font-size: 1.5rem;
         color: rgba(255, 255, 255, 0.6);
         margin-bottom: 1.5rem;
@@ -48,21 +53,21 @@ content {
     }
 }
 
-#Projects {
-    background: #555;
-}
+// #Projects {
+//     background: #555;
+// }
 
-#About {
-    background: #666;
-}
+// #About {
+//     background: #666;
+// }
 
-#Skills {
-    background: #777;
-}
+// #Skills {
+//     background: #777;
+// }
 
-#Contact {
-    background: #888;
-}
+// #Contact {
+//     background: #888;
+// }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;

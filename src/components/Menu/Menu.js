@@ -14,11 +14,11 @@ export default function Menu(props) {
                 <div className="slide slide-right" />
                 <div className="nav-text">Home</div>
             </Link>
-            <Link to="/about" className={props.section === '/about' ? 'nav-button selected' : 'nav-button'} onClick={props.toggleMenu} >
+            {/* <Link to="/about" className={props.section === '/about' ? 'nav-button selected' : 'nav-button'} onClick={props.toggleMenu} >
                 <div className="slide slide-left" />
                 <div className="slide slide-right" />
                 <div className="nav-text">About</div>
-            </Link>
+            </Link> */}
             <Link to="/skills" className={props.section === '/skills' ? 'nav-button selected' : 'nav-button'} onClick={props.toggleMenu} >
                 <div className="slide slide-left" />
                 <div className="slide slide-right" />

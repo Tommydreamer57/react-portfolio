@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Scrollbar from '../../Scrollbar/Scrollbar';
+
 // import Navbar from './Navbar';
 // import NavButtons from './buttons/buttons';
 
