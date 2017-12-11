@@ -3,39 +3,61 @@
   width: 100%;
   display: flex;
   justify-content: space-around;
-  margin-bottom: 1rem; }
+  flex-flow: row wrap;
+  margin: 1.5rem 0 1rem; }
+  #Skills .skills-header .IconSkill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
+    width: 5rem;
+    margin: 1rem 3rem;
+    color: rgba(255, 255, 255, 0.7); }
+    #Skills .skills-header .IconSkill i {
+      font-size: 4rem;
+      margin-bottom: 0.5rem;
+      transition: font-size 0.3s, color 0.3s; }
+    #Skills .skills-header .IconSkill h3 {
+      transition: font-size 0.3s, color 0.3s; }
+  #Skills .skills-header .IconSkill:hover i {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 4.5rem; }
+  #Skills .skills-header .IconSkill:hover h3 {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.75rem; }
 
 #Skills .skills-section {
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-content: space-around;
   align-items: center; }
 
-#Skills .skill {
+#Skills .Skill {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 6rem;
+  height: 3rem;
   width: 5rem;
-  margin: 1rem 3rem;
+  margin: 1rem 2rem;
   color: rgba(255, 255, 255, 0.7);
   transition: color 0.3s; }
-  #Skills .skill h3 {
-    transition: font-size 0.3s, color 0.3s; }
-  #Skills .skill i {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-    transition: font-size 0.3s; }
+  #Skills .Skill h3 {
+    background: #222;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    transition: font-size 0.3s, color 0.3s, background-color 0.3s; }
 
-#Skills .skill:hover {
+#Skills .Skill:hover {
   color: rgba(255, 255, 255, 0.9);
   cursor: default; }
-  #Skills .skill:hover h3 {
-    font-size: 1.75rem;
-    color: rgba(255, 255, 255, 0.9); }
-  #Skills .skill:hover i {
-    font-size: 3.25rem; }
+  #Skills .Skill:hover h3 {
+    font-size: 1.625rem;
+    color: rgba(255, 255, 255, 0.9);
+    background: #252525; }
+  #Skills .Skill:hover i {
+    font-size: 2.575rem; }

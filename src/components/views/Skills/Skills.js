@@ -2,15 +2,23 @@ import React, { Component } from 'react';
 import Scrollbar from '../../Scrollbar/Scrollbar'
 import './Skills.css';
 
-function Skill(skill) {
+function IconSkill(skill) {
     return (
-        <div className="skill">
+        <div className="IconSkill">
             {
                 skill.icon ?
                     <i className={skill.icon} />
                     :
                     <i>&nbsp;</i>
             }
+            <h3>{skill.name}</h3>
+        </div>
+    )
+}
+
+function Skill(skill) {
+    return (
+        <div className="Skill">
             <h3>{skill.name}</h3>
         </div>
     )
@@ -30,20 +38,20 @@ export default class Skills extends Component {
             { name: "Sass", icon: "devicon-sass-original" },
             { name: "AngularJS", icon: "devicon-angularjs-plain" },
             { name: "JQuery", icon: "devicon-jquery-plain" },
-            { name: "", icon: "" }
+            // { name: "", icon: "" }
         ]
         this.back = [
             { name: "Node", icon: "devicon-nodejs-plain" },
             { name: "PostgreSQL", icon: "devicon-postgresql-plain" },
             { name: "Auth0", icon: "" },
             { name: "Heroku", icon: "devicon-heroku-plain" },
-            { name: "", icon: "" },
-            { name: "", icon: "" }
+            // { name: "", icon: "" },
+            // { name: "", icon: "" }
         ]
         this.lib = [
             { name: "Slate", icon: "" },
             { name: "Ace", icon: "" },
-            { name: "", icon: "" }
+            // { name: "", icon: "" }
             // { name: "iframes", icon: "" }
         ]
     }
@@ -56,7 +64,7 @@ export default class Skills extends Component {
                 <h1>My Skills</h1>
                 <div className="skills-header">
                     {
-                        this.skills.map(Skill)
+                        this.skills.map(IconSkill)
                     }
                 </div>
                 <h2>Front End</h2>
