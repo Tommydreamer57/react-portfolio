@@ -16,6 +16,7 @@ import { Route, Switch } from 'react-router-dom';
 class App extends Component {
   constructor() {
     super()
+    this.scroll = 0
     this.state = {
       routes: [
         "",
@@ -43,9 +44,14 @@ class App extends Component {
   }
 
   onScroll = () => {
-    this.setState({
-      scroll: ++this.state.scroll
-    })
+    console.log('scrolling')
+    this.scroll++
+    if (!(this.scroll % 2)) {
+      console.log('setting state')
+      this.setState({
+        scroll: ++this.state.scroll
+      })
+    }
   }
 
   setRoute = current => {
@@ -67,7 +73,7 @@ class App extends Component {
   render() {
     let { previous, selected, next } = this.state
     return (
-      <div className="App" id="App" onScroll={this.onScroll}>
+      <div className="App" id="App" onKeyDown={() => { }}>
         <content>
           <About
             style={previous}
@@ -81,6 +87,7 @@ class App extends Component {
           <Contact
             style={next}
           />
+          <div id="bottom" style={{ position: "absolute", bottom: 0 }} />
         </content>
         <NavButtons
           current={this.state.current}
@@ -92,7 +99,6 @@ class App extends Component {
           toggleMenu={this.toggleMenu}
         />
         <Scrollbar scroll={this.state.scroll} />
-        <div id="bottom" />
       </div>
     );
   }

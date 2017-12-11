@@ -5,14 +5,44 @@ export default class Srollbar extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            scroll: false
+            scroll: true
+        }
+        this.const = {
+            contentHeight: 0,
+            viewHeight: 0
         }
     }
-    componentWillReceiveProps(props) {
-        let contentHeight = document.getElementById('bottom').offsetTop
-        let scrollTop = document.getElementById('App').scrollTop
+    componentDidMount() {
+        // grabbing constants to save on this.const
+        let contentHeight = 0
+
+        function findTallestNode(nodes) {
+            for (let i = nodes.length - 1; i >= 0; i--) {
+                if (nodes[i].scrollHeight && nodes[i].clientHeight) {
+                    let elHeight = Math.max(nodes[i].scrollHeight, nodes[i].clientHeight)
+                    contentHeight = Math.max(contentHeight, elHeight);
+                }
+                if (nodes[i].childNodes.length) findTallestNode(nodes[i].childNodes);
+            }
+        }
+
+        findTallestNode(document.documentElement.childNodes)
+
         let viewHeight = window.innerHeight
 
+        this.const = {
+            contentHeight,
+            viewHeight
+        }
+
+        console.log(this.const)
+        document.getElementById("App").addEventListener('scroll', this.scroll)
+    }
+    scroll = props => {
+        let { contentHeight, viewHeight } = this.const
+        let scrollTop = document.getElementById('App').scrollTop
+
+        // RATIOS:
         // Height / (ViewHeight - 4) === ViewHeight / ContentHeight
         // Top / (ViewHeight - 4) === ScrollTop / ContentHeight
         
@@ -21,13 +51,14 @@ export default class Srollbar extends Component {
         // the ' - 4' accounts for padding around the scrollbar
 
         // css top attribute of the scrollbar
-        let top = scrollTop * (viewHeight - 4) / contentHeight + 2
+        let top = (scrollTop * (viewHeight - 4) / contentHeight) + 2
         // the ' + 2' accounts for padding around the scrollbar
 
-        // console.log('new props')
-        // console.log(height, top)
-        // console.log(contentHeight, scrollTop)
-        // console.log(viewHeight)
+        console.log('new props')
+        console.log(height, contentHeight)
+        console.log(height / contentHeight)
+        console.log(top, scrollTop)
+        console.log(top / scrollTop)
 
         if (contentHeight - viewHeight <= 10) {
             if (this.state.scroll) {
