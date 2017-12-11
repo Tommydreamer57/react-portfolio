@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import Landing from './components/Landing';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
@@ -20,7 +19,6 @@ class App extends Component {
       routes: [
         "",
         "/",
-        // "/about",
         "/skills",
         "/projects",
         "/contact",
@@ -28,14 +26,7 @@ class App extends Component {
       ],
       current: 1,
       menu: false,
-      scroll: 0,
     }
-  }
-
-  onScroll = () => {
-    this.setState({
-      scroll: ++this.state.scroll
-    })
   }
 
   setRoute = current => {
@@ -54,17 +45,11 @@ class App extends Component {
     })
   }
 
-  render() {
+  render = () => {
     return (
       <div className="App" id="App" onScroll={this.onScroll}>
         <content>
           <Switch>
-            {/* <Route
-              exact path="/"
-              render={() => {
-                return <Landing setRoute={() => this.setRoute(1)} previous={this.state.route} />
-              }}
-            /> */}
             <Route exact
               path="/"
               render={() => {
@@ -101,8 +86,6 @@ class App extends Component {
           toggleMenu={this.toggleMenu}
         />
         <Scrollbar scroll={this.state.scroll} />
-        {/*
-        <Navbar id="Navbar" scrollTo={this.scrollTo} section={this.state.section} /> */}
         <div id="bottom" />
       </div>
     );

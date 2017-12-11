@@ -7,7 +7,6 @@
   #Scrollbar-wrapper #scrollbar {
     position: fixed;
     right: 2px;
-    height: calc(100vh / 3);
     width: 8px;
     border-radius: 5px;
     background: #444;
