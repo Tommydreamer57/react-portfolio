@@ -18,7 +18,7 @@ export default class Srollbar extends Component {
         window.addEventListener('resize', this.setSize)
     }
     setSize = () => {
-        console.log('setting size')
+        // console.log('setting size')
         // grab constants to save on this.const
         let contentHeight = 0
         let viewHeight = window.innerHeight
@@ -92,7 +92,7 @@ export default class Srollbar extends Component {
     }
     render = () => {
         let { height, top } = this.state
-        console.log(this.state)
+        // console.log(this.state)
         return (
             <div id="Scrollbar-wrapper">
                 {

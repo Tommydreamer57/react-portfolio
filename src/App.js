@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
-import About from './components/About';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+import About from './components/views/About/About';
+import Skills from './components/views/Skills/Skills';
+import Projects from './components/views/Projects/Projects';
+import Contact from './components/views/Contact/Contact';
 import Menu from './components/Menu/Menu';
 import Scrollbar from './components/Scrollbar/Scrollbar';
 import NavButtons from './components/buttons/buttons';

@@ -19,3 +19,6 @@ export default class Skills extends Component {
         )
     }
 }
+
+// skills
+// HTML CSS JavaScript  |  React Redux Node Sass Express Massive PostgreSQL  |  Angular JQuery
