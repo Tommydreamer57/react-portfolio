@@ -2,6 +2,20 @@ import React, { Component } from 'react';
 import Scrollbar from '../../Scrollbar/Scrollbar'
 import './Skills.css';
 
+function Skill(skill) {
+    return (
+        <div className="skill">
+            {
+                skill.icon ?
+                    <i className={skill.icon} />
+                    :
+                    <i>&nbsp;</i>
+            }
+            <h3>{skill.name}</h3>
+        </div>
+    )
+}
+
 export default class Skills extends Component {
     constructor(props) {
         super(props)
@@ -15,17 +29,21 @@ export default class Skills extends Component {
             { name: "Redux", icon: "" },
             { name: "Sass", icon: "devicon-sass-original" },
             { name: "AngularJS", icon: "devicon-angularjs-plain" },
-            { name: "JQuery", icon: "devicon-jquery-plain" }
+            { name: "JQuery", icon: "devicon-jquery-plain" },
+            { name: "", icon: "" }
         ]
         this.back = [
             { name: "Node", icon: "devicon-nodejs-plain" },
             { name: "PostgreSQL", icon: "devicon-postgresql-plain" },
             { name: "Auth0", icon: "" },
-            { name: "Heroku", icon: "devicon-heroku-plain" }
+            { name: "Heroku", icon: "devicon-heroku-plain" },
+            { name: "", icon: "" },
+            { name: "", icon: "" }
         ]
         this.lib = [
             { name: "Slate", icon: "" },
             { name: "Ace", icon: "" },
+            { name: "", icon: "" }
             // { name: "iframes", icon: "" }
         ]
     }
@@ -35,56 +53,28 @@ export default class Skills extends Component {
     render() {
         return (
             <div className="content" id="Skills">
-                <h1>Skills</h1>
+                <h1>My Skills</h1>
                 <div className="skills-header">
                     {
-                        this.skills.map(skill => {
-                            return (
-                                <div className="skill">
-                                    <i className={skill.icon} />
-                                    <h3>{skill.name}</h3>
-                                </div>
-                            )
-                        })
+                        this.skills.map(Skill)
                     }
                 </div>
                 <h2>Front End</h2>
                 <div className="skills-section">
                     {
-                        this.front.map(skill => {
-                            return (
-                                <div className="skill">
-                                    <i className={skill.icon} />
-                                    <h3>{skill.name}</h3>
-                                </div>
-                            )
-                        })
+                        this.front.map(Skill)
                     }
                 </div>
                 <h2>Back End</h2>
                 <div className="skills-section">
                     {
-                        this.back.map(skill => {
-                            return (
-                                <div className="skill">
-                                    <i className={skill.icon} />
-                                    <h3>{skill.name}</h3>
-                                </div>
-                            )
-                        })
+                        this.back.map(Skill)
                     }
                 </div>
                 <h2>Libraries</h2>
                 <div className="skills-section">
                     {
-                        this.lib.map(skill => {
-                            return (
-                                <div className="skill">
-                                    <i className={skill.icon} />
-                                    <h3>{skill.name}</h3>
-                                </div>
-                            )
-                        })
+                        this.lib.map(Skill)
                     }
                 </div>
             </div>

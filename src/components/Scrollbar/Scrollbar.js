@@ -17,6 +17,7 @@ export default class Srollbar extends Component {
         this.setSize()
         document.getElementById("App").addEventListener('scroll', this.scroll)
         window.addEventListener('resize', this.setSize)
+        window.addEventListener('click', this.setSize)
     }
     setSize = () => {
         // console.log('setting size')

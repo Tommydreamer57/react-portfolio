@@ -25,15 +25,17 @@
   color: rgba(255, 255, 255, 0.7);
   transition: color 0.3s; }
   #Skills .skill h3 {
-    transition: font-size 0.3s; }
+    transition: font-size 0.3s, color 0.3s; }
   #Skills .skill i {
     font-size: 3rem;
     margin-bottom: 0.5rem;
     transition: font-size 0.3s; }
 
 #Skills .skill:hover {
-  color: white; }
+  color: rgba(255, 255, 255, 0.9);
+  cursor: default; }
   #Skills .skill:hover h3 {
-    font-size: 1.75rem; }
+    font-size: 1.75rem;
+    color: rgba(255, 255, 255, 0.9); }
   #Skills .skill:hover i {
     font-size: 3.25rem; }
