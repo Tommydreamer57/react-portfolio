@@ -36,7 +36,8 @@
       right: -33%;
       z-index: 2; }
     #Menu .nav-button .nav-text {
-      z-index: 4; }
+      z-index: 4;
+      transition: color 0.4s; }
   #Menu .nav-button:hover .nav-text {
     color: rgba(255, 255, 255, 0.7); }
   #Menu .nav-button:hover .slide {
