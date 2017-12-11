@@ -38,21 +38,16 @@ export default class Skills extends Component {
             { name: "Sass", icon: "devicon-sass-original" },
             { name: "AngularJS", icon: "devicon-angularjs-plain" },
             { name: "JQuery", icon: "devicon-jquery-plain" },
-            // { name: "", icon: "" }
         ]
         this.back = [
             { name: "Node", icon: "devicon-nodejs-plain" },
             { name: "PostgreSQL", icon: "devicon-postgresql-plain" },
             { name: "Auth0", icon: "" },
             { name: "Heroku", icon: "devicon-heroku-plain" },
-            // { name: "", icon: "" },
-            // { name: "", icon: "" }
         ]
         this.lib = [
             { name: "Slate", icon: "" },
             { name: "Ace", icon: "" },
-            // { name: "", icon: "" }
-            // { name: "iframes", icon: "" }
         ]
     }
     componentDidMount() {
@@ -89,6 +84,3 @@ export default class Skills extends Component {
         )
     }
 }
-
-// skills
-// HTML CSS JavaScript  |  React Redux Node Sass Express Massive PostgreSQL  |  Angular JQuery

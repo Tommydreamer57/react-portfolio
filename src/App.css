@@ -36,6 +36,9 @@ content {
     font-size: 1.5rem;
     color: rgba(255, 255, 255, 0.6);
     margin-bottom: 1.5rem; }
+  .content h4 {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.5); }
   .content p {
     font-size: 1.175rem;
     color: rgba(255, 255, 255, 0.4);

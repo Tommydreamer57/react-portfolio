@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import Scrollbar from '../../Scrollbar/Scrollbar';
 
-// import Navbar from './Navbar';
-// import NavButtons from './buttons/buttons';
-
 export default class About extends Component {
     constructor(props) {
         super(props)

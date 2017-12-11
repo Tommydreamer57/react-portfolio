@@ -48,7 +48,7 @@
     }
     .Skill {
         display: flex;
-        flex-direction: column;
+        // flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 3rem;
@@ -60,7 +60,7 @@
             background: #222;
             padding: 0.5rem 0.75rem;
             border-radius: 0.25rem;
-            transition: font-size 0.3s, color 0.3s, background-color 0.3s;
+            transition: font-size 0.3s, background-color 0.3s;
         }
     }
     .Skill:hover {
@@ -68,7 +68,7 @@
         cursor: default;
         h3 {
             font-size: 1.625rem;
-            color: rgba(255, 255, 255, 0.9);
+            // color: rgba(255, 255, 255, 0.9);
             background: #252525;
         }
         i {
