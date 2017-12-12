@@ -2,28 +2,48 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 2rem; }
+  margin: 1rem 0 3rem; }
   #Projects .project .info-wrapper {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    margin: 1rem 0; }
+    #Projects .project .info-wrapper .info h3 {
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.4); }
+    #Projects .project .info-wrapper .image {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      margin-left: 1.5rem;
+      width: 350px;
+      min-width: 350px;
+      height: 200px;
+      min-height: 200px;
+      background: black;
+      overflow: hidden; }
+      #Projects .project .info-wrapper .image img {
+        width: 350px;
+        height: 207.5px;
+        transition: width 0.2s, height 0.2s; }
   #Projects .project .tech-list {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
-    align-items: center; }
+    align-items: center;
+    margin: 0.5rem; }
     #Projects .project .tech-list .Tech {
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      margin: 0.75rem; }
+      margin: 0.75rem;
+      margin-bottom: 0.5rem; }
       #Projects .project .tech-list .Tech h4 {
         position: relative;
         background: #222;
         padding: 0.25rem 0.5rem;
         border-radius: 0.25rem;
-        overflow: hidden;
-        transition: font-size 0.3s, background-color 0.3s; }
+        overflow: hidden; }
         #Projects .project .tech-list .Tech h4 .slide {
           background: rgba(255, 255, 255, 0.075);
           position: absolute;
@@ -32,7 +52,9 @@
           height: 500%;
           right: -15%;
           transform: rotate(-30deg);
-          transition: width 0.4s cubic-bezier(0.65, 0.15, 0, 1); }
+          transition: width 0.35s cubic-bezier(0.65, 0.15, 0, 1); }
+    #Projects .project .tech-list .Tech:first-of-type {
+      margin-left: 0; }
     #Projects .project .tech-list .Tech:hover {
       cursor: default; }
       #Projects .project .tech-list .Tech:hover h4 .slide {

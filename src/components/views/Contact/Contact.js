@@ -10,6 +10,7 @@ export default class Contact extends Component {
     }
     componentDidMount() {
         this.props.setRoute()
+        document.getElementById('App').scrollTop = 0
     }
     render() {
         return (

@@ -52,6 +52,7 @@ export default class Skills extends Component {
     }
     componentDidMount() {
         this.props.setRoute()
+        document.getElementById('App').scrollTop = 0
     }
     render() {
         return (

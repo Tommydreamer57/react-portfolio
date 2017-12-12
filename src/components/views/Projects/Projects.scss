@@ -3,15 +3,39 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        margin-bottom: 2rem;
+        margin: 1rem 0 3rem;
         .info-wrapper {
             display: flex;
             justify-content: space-between;
+            margin: 1rem 0;
             .info {
-
+                h3 {
+                    font-style: italic;
+                    color: rgba(255, 255, 255, 0.4);
+                }
             }
-            img {
-                
+            .image {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                margin-left: 1.5rem;
+                width: 350px;
+                min-width: 350px;                
+                height: 200px;
+                min-height: 200px;                
+                background: black;
+                overflow: hidden;
+                img {
+                    width: 350px;
+                    height: 207.5px;
+                    transition: width 0.2s, height 0.2s;
+                }
+            }
+            .image:hover {
+                img {
+                    // width: 353.5px;
+                    // height: 210px;
+                }
             }
         }
         .tech-list {
@@ -20,20 +44,19 @@
             flex-flow: row wrap;
             justify-content: flex-start;
             align-items: center;
+            margin: 0.5rem;
             .Tech {
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
-                // height: 3rem;
-                // width: 4rem;
                 margin: 0.75rem;
+                margin-bottom: 0.5rem;
                 h4 {
                     position: relative;
                     background: #222;
                     padding: 0.25rem 0.5rem;
                     border-radius: 0.25rem;
                     overflow: hidden;
-                    transition: font-size 0.3s, background-color 0.3s;
                     .slide {
                         background: rgba(255, 255, 255, 0.075);
                         position: absolute;
@@ -42,9 +65,12 @@
                         height: 500%;
                         right: -15%;
                         transform: rotate(-30deg);
-                        transition: width 0.4s cubic-bezier(.65,.15,0,1);
+                        transition: width 0.35s cubic-bezier(.65,.15,0,1);
                     }
                 }
+            }
+            .Tech:first-of-type {
+                margin-left: 0;
             }
             .Tech:hover {
                 cursor: default;

@@ -27,6 +27,9 @@
     color: rgba(255, 255, 255, 0.9);
     font-size: 1.75rem; }
 
+#Skills h2 {
+  margin-top: 1rem; }
+
 #Skills .skills-section {
   width: 100%;
   margin: 0 1rem 1rem;
@@ -48,8 +51,7 @@
     background: #222;
     padding: 0.5rem 0.75rem;
     border-radius: 0.25rem;
-    overflow: hidden;
-    transition: font-size 0.3s, background-color 0.3s; }
+    overflow: hidden; }
     #Skills .Skill h3 .slide {
       background: rgba(255, 255, 255, 0.075);
       position: absolute;
@@ -58,7 +60,7 @@
       height: 500%;
       right: -15%;
       transform: rotate(-30deg);
-      transition: width 0.4s cubic-bezier(0.65, 0.15, 0, 1); }
+      transition: width 0.35s cubic-bezier(0.65, 0.15, 0, 1); }
 
 #Skills .Skill:hover {
   color: rgba(255, 255, 255, 0.9);
