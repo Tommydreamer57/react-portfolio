@@ -1,0 +1,45 @@
+#About p {
+  padding: 0.25rem 0; }
+
+#About .more-info {
+  transition: max-height 1s cubic-bezier(0.65, 0.15, 0, 1);
+  overflow: hidden; }
+
+#About .button-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0; }
+  #About .button-wrapper button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 3rem 2rem 1rem; }
+    #About .button-wrapper button h4 {
+      color: rgba(255, 255, 255, 0);
+      position: absolute;
+      top: 1rem;
+      transition: color 0.3s, top 0.15s; }
+    #About .button-wrapper button .wrapper {
+      margin: -5px;
+      transition: margin 0.3s cubic-bezier(0.65, 0.15, 0, 1); }
+    #About .button-wrapper button .button-line {
+      width: 30px;
+      height: 2px;
+      background: rgba(255, 255, 255, 0.4);
+      transition: margin 0.3s, transform 0.3s cubic-bezier(0.65, 0.15, 0, 1); }
+    #About .button-wrapper button #left {
+      transform: rotate(-135deg); }
+    #About .button-wrapper button #right {
+      transform: rotate(135deg); }
+  #About .button-wrapper button:hover {
+    cursor: pointer; }
+    #About .button-wrapper button:hover .wrapper {
+      margin-top: 20px; }
+    #About .button-wrapper button:hover h4 {
+      top: 0.25rem;
+      color: rgba(255, 255, 255, 0.4); }
+  #About .button-wrapper .less-arrow #left {
+    transform: rotate(-225deg); }
+  #About .button-wrapper .less-arrow #right {
+    transform: rotate(225deg); }

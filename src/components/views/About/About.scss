@@ -1,0 +1,77 @@
+#About {
+    p {
+        padding: 0.25rem 0;
+    }
+    .more-info {
+        transition: max-height 1s cubic-bezier(.65,.15,0,1);
+        overflow: hidden;
+    }
+    .button-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 3rem 0;
+        button {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            padding: 3rem 2rem 1rem;
+            h4 {
+                color: rgba(255, 255, 255, 0);
+                position: absolute;
+                top: 1rem;
+                transition: color 0.3s, top 0.15s;
+                // transition-delay: 0.15s;
+            }
+            .wrapper {
+                margin: -5px;
+                transition: margin 0.3s cubic-bezier(.65,.15,0,1);
+                // margin:0 -14.5px;
+            }
+            .button-line {
+                width: 30px;
+                height: 2px;
+                background: rgba(255, 255, 255, 0.4);
+                transition: margin 0.3s, transform 0.3s cubic-bezier(.65,.15,0,1);
+            }
+            #left {
+                transform: rotate(-135deg); // translateX(14.5px);
+            }
+            #right {
+                transform: rotate(135deg); // translateX(-14.5px);
+            }
+        }
+        button:hover {
+            cursor: pointer;
+            .wrapper {
+                margin-top: 20px;
+            }
+            h4 {
+                top: 0.25rem;
+                color: rgba(255, 255, 255, 0.4);
+            }
+            #left {
+                // transform: rotate(-150deg); // translateX(14.5px);
+            }
+            #right {
+                // transform: rotate(150deg); // translateX(-14.5px);
+            }
+        }
+        .less-arrow {
+            #left {
+                transform: rotate(-225deg); // translateX(14.5px);
+            }
+            #right {
+                transform: rotate(225deg); // translateX(-14.5px);
+            }
+        }
+        .less-arrow:hover {
+            #left {
+                // transform: rotate(-210deg); // translateX(14.5px);
+            }
+            #right {
+                // transform: rotate(210deg); // translateX(-14.5px);
+            }
+        }
+    }
+}

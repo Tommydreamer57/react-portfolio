@@ -10,8 +10,6 @@
     #Projects .project .info-wrapper .info h3 {
       font-style: italic;
       color: rgba(255, 255, 255, 0.4); }
-    #Projects .project .info-wrapper .info p {
-      margin-bottom: 0.75rem; }
     #Projects .project .info-wrapper .link {
       margin-left: 1.5rem;
       display: flex;

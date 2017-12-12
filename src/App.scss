@@ -43,7 +43,7 @@ content {
     }
     h3 {
         font-size: 1.5rem;
-        color: rgba(255, 255, 255, 0.6);
+        color: rgba(255, 255, 255, 0.5);
         margin-bottom: 1.5rem;
     }
     h4 {
@@ -54,24 +54,15 @@ content {
         font-size: 1.175rem;
         color: rgba(255, 255, 255, 0.4);
         line-height: 125%;
+        margin-bottom: 0.75rem;
     }
 }
 
-// #Projects {
-//     background: #555;
-// }
-
-// #About {
-//     background: #666;
-// }
-
-// #Skills {
-//     background: #777;
-// }
-
-// #Contact {
-//     background: #888;
-// }
+button {
+        background: transparent;
+        border: none;
+        outline: 0;
+    }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
