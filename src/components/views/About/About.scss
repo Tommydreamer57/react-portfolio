@@ -20,7 +20,7 @@
                 color: rgba(255, 255, 255, 0);
                 position: absolute;
                 top: 1rem;
-                transition: color 0.3s, top 0.15s;
+                transition: color 0.3s, top 0.15s cubic-bezier(.65,.15,0,1);
                 // transition-delay: 0.15s;
             }
             .wrapper {
