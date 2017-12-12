@@ -10,6 +10,8 @@
     #Projects .project .info-wrapper .info h3 {
       font-style: italic;
       color: rgba(255, 255, 255, 0.4); }
+    #Projects .project .info-wrapper .info p {
+      margin-bottom: 0.75rem; }
     #Projects .project .info-wrapper .image {
       display: flex;
       justify-content: center;
@@ -31,13 +33,13 @@
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: center;
-    margin: 0.5rem; }
+    margin: 0.5rem 0; }
     #Projects .project .tech-list .Tech {
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      margin: 0.75rem;
-      margin-bottom: 0.5rem; }
+      margin: 0.75rem 1.5rem 0.5rem;
+      margin-left: 0; }
       #Projects .project .tech-list .Tech h4 {
         position: relative;
         background: #222;
@@ -53,8 +55,6 @@
           right: -15%;
           transform: rotate(-30deg);
           transition: width 0.35s cubic-bezier(0.65, 0.15, 0, 1); }
-    #Projects .project .tech-list .Tech:first-of-type {
-      margin-left: 0; }
     #Projects .project .tech-list .Tech:hover {
       cursor: default; }
       #Projects .project .tech-list .Tech:hover h4 .slide {

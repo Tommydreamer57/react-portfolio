@@ -13,6 +13,9 @@
                     font-style: italic;
                     color: rgba(255, 255, 255, 0.4);
                 }
+                p {
+                    margin-bottom: 0.75rem;
+                }
             }
             .image {
                 display: flex;
@@ -44,13 +47,13 @@
             flex-flow: row wrap;
             justify-content: flex-start;
             align-items: center;
-            margin: 0.5rem;
+            margin: 0.5rem 0;
             .Tech {
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
-                margin: 0.75rem;
-                margin-bottom: 0.5rem;
+                margin: 0.75rem 1.5rem 0.5rem;
+                margin-left: 0;
                 h4 {
                     position: relative;
                     background: #222;
@@ -68,9 +71,6 @@
                         transition: width 0.35s cubic-bezier(.65,.15,0,1);
                     }
                 }
-            }
-            .Tech:first-of-type {
-                margin-left: 0;
             }
             .Tech:hover {
                 cursor: default;
