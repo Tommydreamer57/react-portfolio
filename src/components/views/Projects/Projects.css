@@ -18,11 +18,22 @@
       align-items: center;
       margin: 0.75rem; }
       #Projects .project .tech-list .Tech h4 {
+        position: relative;
         background: #222;
         padding: 0.25rem 0.5rem;
         border-radius: 0.25rem;
+        overflow: hidden;
         transition: font-size 0.3s, background-color 0.3s; }
+        #Projects .project .tech-list .Tech h4 .slide {
+          background: rgba(255, 255, 255, 0.075);
+          position: absolute;
+          top: -200%;
+          width: 0;
+          height: 500%;
+          right: -15%;
+          transform: rotate(-30deg);
+          transition: width 0.4s cubic-bezier(0.65, 0.15, 0, 1); }
     #Projects .project .tech-list .Tech:hover {
       cursor: default; }
-      #Projects .project .tech-list .Tech:hover h4 {
-        background: #252525; }
+      #Projects .project .tech-list .Tech:hover h4 .slide {
+        width: 130%; }

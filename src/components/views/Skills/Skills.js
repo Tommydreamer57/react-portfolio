@@ -19,7 +19,7 @@ function IconSkill(skill) {
 function Skill(skill) {
     return (
         <div className="Skill">
-            <h3>{skill.name}</h3>
+            <h3>{skill.name}<div className="slide" /></h3>
         </div>
     )
 }

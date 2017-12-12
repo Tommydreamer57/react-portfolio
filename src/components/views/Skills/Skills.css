@@ -29,7 +29,7 @@
 
 #Skills .skills-section {
   width: 100%;
-  margin-bottom: 1rem;
+  margin: 0 1rem 1rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -40,22 +40,28 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 3rem;
-  width: 5rem;
-  margin: 1rem 2rem;
+  margin: 0.5rem 1rem;
   color: rgba(255, 255, 255, 0.7);
   transition: color 0.3s; }
   #Skills .Skill h3 {
+    position: relative;
     background: #222;
     padding: 0.5rem 0.75rem;
     border-radius: 0.25rem;
+    overflow: hidden;
     transition: font-size 0.3s, background-color 0.3s; }
+    #Skills .Skill h3 .slide {
+      background: rgba(255, 255, 255, 0.075);
+      position: absolute;
+      top: -200%;
+      width: 0;
+      height: 500%;
+      right: -15%;
+      transform: rotate(-30deg);
+      transition: width 0.4s cubic-bezier(0.65, 0.15, 0, 1); }
 
 #Skills .Skill:hover {
   color: rgba(255, 255, 255, 0.9);
   cursor: default; }
-  #Skills .Skill:hover h3 {
-    font-size: 1.625rem;
-    background: #252525; }
-  #Skills .Skill:hover i {
-    font-size: 2.575rem; }
+  #Skills .Skill:hover h3 .slide {
+    width: 125%; }

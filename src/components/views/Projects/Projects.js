@@ -25,7 +25,7 @@ function Project(project) {
 function Tech(tech) {
     return (
         <div className="Tech">
-            <h4>{tech.name}</h4>
+            <h4>{tech.name}<div className="slide" /></h4>
         </div>
     )
 }
