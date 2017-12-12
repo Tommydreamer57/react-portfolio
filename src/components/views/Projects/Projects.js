@@ -55,7 +55,9 @@ export default class Projects extends Component {
             {
                 title: "Blog Template",
                 subtitle: "DevMountain Personal Project",
-                description: ["I built this project using React on Redux with the SlateJS text-editing library and Passport-Auth0 authentication. Users can navigate through posts and add comments, responses and favorites. Admins can login to create, edit, and publish new posts."],
+                description: [
+                    "I built this project using React on Redux with the SlateJS text-editing library and Passport-Auth0 authentication. Users can navigate through posts and add comments, responses and favorites. Admins can login to create, edit, and publish new posts."
+                ],
                 img: personal,
                 url: "http://personalproject.thomaslowry.me",
                 tech: [
@@ -71,7 +73,12 @@ export default class Projects extends Component {
             {
                 title: "CodeWars Clone",
                 subtitle: "DevMountain Group Project",
-                description: ["I worked together with Chase Davis and Conner Jensen to create this clone of CodeWars.com, a webapp for practicing code.", "This project utilizes the Ace code editor and Slate text editor as well as an iframe sandbox for security. Code input and test cases are saved as strings and sent to the iframe to be converted into their correct data types and evaluated.", "My responsibilities included creating the algorithms to parse the strings into the correct data types, evaluate the code input, catch any errors, and return the results.", "In conjunction with the testing functionality, I built the create page and the tests component."],
+                description: [
+                    "I worked together with Chase Davis and Conner Jensen to create this clone of CodeWars.com, a webapp for practicing code.",
+                    "This project utilizes the Ace code editor and Slate text editor as well as an iframe sandbox for security. Code input and test cases are saved as strings and sent to the iframe to be converted into their correct data types and evaluated.",
+                    "My responsibilities included creating the algorithms to parse the strings into the correct data types, evaluate the code input, catch any errors, and return the results.",
+                    "In conjunction with the testing functionality, I built the create page and the tests component."
+                ],
                 img: group,
                 url: "http://groupproject.thomaslowry.me",
                 tech: [
@@ -88,7 +95,11 @@ export default class Projects extends Component {
             {
                 title: "Trivia Trends",
                 subtitle: "Angular Simulation",
-                description: ["I built this project in Angular for a competition at devmountain. The styles and basic HTML were already set up, along with an API.", "The contest was to be the first add all the functionality with Angular, including retreiving, filtering, and mapping through the data, handling clicks and adding correct class-names, and sending data back to the API.", "My group won this competition, and afterwards I built my own database and server for the project."],
+                description: [
+                    "I built this project in Angular for a competition at devmountain. The styles and basic HTML were already set up, along with an API.",
+                    "The contest was to be the first to add all the functionality with Angular, including retreiving, filtering, and mapping through the data, handling clicks and adding correct class-names, and sending data back to the API.",
+                    "My group won this competition, and afterwards I built my own database and server for the project."
+                ],
                 img: trivia,
                 url: "http://trivia.thomaslowry.me",
                 tech: [
