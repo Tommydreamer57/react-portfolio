@@ -17,10 +17,13 @@ export default class Srollbar extends Component {
         this.setSize()
         document.getElementById("App").addEventListener('scroll', this.scroll)
         window.addEventListener('resize', this.setSize)
-        window.addEventListener('click', this.setSize)
+        window.addEventListener('click', () => {
+            setTimeout(this.setSize, 100)
+            setTimeout(this.setSize, 550)
+            setTimeout(this.setSize, 1000)            
+        })
     }
     setSize = () => {
-        // console.log('setting size')
         // grab constants to save on this.const
         let contentHeight = 0
         let viewHeight = window.innerHeight
