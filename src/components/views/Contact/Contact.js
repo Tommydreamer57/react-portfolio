@@ -1,12 +1,40 @@
 import React, { Component } from 'react';
 import Scrollbar from '../../Scrollbar/Scrollbar';
+import LinkedIn from '../../assets/iconmonstr-linkedin-3.svg';
+import './Contact.css';
 
-// import Navbar from './Navbar';
-// import NavButtons from './buttons/buttons';
+function Link(link) {
+    return (
+        <a href={link.link} className="Link">
+            {
+                link.icon ?
+                    <i className={link.icon} />
+                    :
+                    link.svg ?
+                        <img src={link.svg} />
+                        :
+                        null
+            }
+            <h3>{link.name}</h3>
+        </a>
+    )
+}
 
 export default class Contact extends Component {
     constructor(props) {
         super(props)
+        this.links = [
+            {
+                name: "GitHub",
+                icon: "devicon-github-plain",
+                link: "http://github.com/tommydreamer57"
+            },
+            {
+                name: "LinkedIn",
+                svg: LinkedIn,
+                link: "http://linkedin.com/in/thomasglowry"
+            }
+        ]
     }
     componentDidMount() {
         this.props.setRoute()
@@ -16,8 +44,11 @@ export default class Contact extends Component {
         return (
             <div className="content" id="Contact">
                 <h1>Contact</h1>
-                {/* <NavButtons current={5} /> */}
-                {/* <Navbar id="Navbar" /> */}
+                <div className="links">
+                    {
+                        this.links.map(Link)
+                    }
+                </div>
             </div>
         )
     }

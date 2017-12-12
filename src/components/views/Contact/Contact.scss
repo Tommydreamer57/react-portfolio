@@ -1,0 +1,37 @@
+#Contact {
+    .links {
+        margin: 5rem 2rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-flow: row wrap;
+        .Link {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 8rem;
+            height: 10rem;
+            img, i {
+                height: 4rem;
+                font-size: 4.25rem;
+                margin: 0.5rem;
+                color: rgba(255, 255, 255, 0.7);
+                // fill: -- color specified in svg folder;
+                transition: height 0.35s, font-size 0.35s;
+            }
+            h3 {
+                transition: font-size 0.35s;
+            }
+        }
+        .Link:hover {
+            img, i {
+                height: 4.5rem;
+                font-size: 4.75rem;
+            }
+            h3 {
+                font-size: 1.675rem;
+            }
+        }
+    }
+}

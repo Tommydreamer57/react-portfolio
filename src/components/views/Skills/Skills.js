@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Scrollbar from '../../Scrollbar/Scrollbar'
 import './Skills.css';
+import redux from '../../assets/Redux.svg';
 
 function IconSkill(skill) {
     return (
@@ -10,6 +11,12 @@ function IconSkill(skill) {
                     <i className={skill.icon} />
                     :
                     <i>&nbsp;</i>
+            }
+            {
+                skill.svg ?
+                    skill.svg
+                    :
+                    null
             }
             <h3>{skill.name}</h3>
         </div>
@@ -34,7 +41,7 @@ export default class Skills extends Component {
         ]
         this.front = [
             { name: "React", icon: "devicon-react-original" },
-            { name: "Redux", icon: "" },
+            { name: "Redux", svg: redux },
             { name: "Sass", icon: "devicon-sass-original" },
             { name: "AngularJS", icon: "devicon-angularjs-plain" },
             { name: "JQuery", icon: "devicon-jquery-plain" },
@@ -45,9 +52,12 @@ export default class Skills extends Component {
             { name: "Auth0", icon: "" },
             { name: "Heroku", icon: "devicon-heroku-plain" },
         ]
-        this.lib = [
+        this.other = [
             { name: "Slate", icon: "" },
             { name: "Ace", icon: "" },
+            { name: "iframe", icon: "" },
+            { name: "Jest", icon: "" },
+            { name: "git", icon: "devicon-github-plain" },
         ]
     }
     componentDidMount() {
@@ -75,10 +85,10 @@ export default class Skills extends Component {
                         this.back.map(Skill)
                     }
                 </div>
-                <h2>Libraries</h2>
+                <h2>Other Technologies</h2>
                 <div className="skills-section">
                     {
-                        this.lib.map(Skill)
+                        this.other.map(Skill)
                     }
                 </div>
             </div>

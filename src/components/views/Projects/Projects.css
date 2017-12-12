@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin: 1rem 0 3rem; }
+  margin: 1.5rem 0 4.5rem; }
   #Projects .project .info-wrapper {
     display: flex;
     justify-content: space-between;
@@ -12,11 +12,15 @@
       color: rgba(255, 255, 255, 0.4); }
     #Projects .project .info-wrapper .info p {
       margin-bottom: 0.75rem; }
+    #Projects .project .info-wrapper .link {
+      margin-left: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
     #Projects .project .info-wrapper .image {
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      margin-left: 1.5rem;
       width: 350px;
       min-width: 350px;
       height: 200px;

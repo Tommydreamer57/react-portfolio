@@ -10,15 +10,20 @@ function Project(project) {
         <div className="project">
             <div className="info-wrapper">
                 <div className="info">
-                    <h2>{project.title}</h2>
+                    <a href={project.url} ><h2>{project.title}</h2></a>
                     <h3>{project.subtitle}</h3>
                     {
                         project.description.map(Desc)
                     }
                 </div>
-                <a href={project.url} className="image">
-                    <img src={project.img} />
-                </a>
+                <div className="link">
+                    <a href={project.url} className="image">
+                        <img src={project.img} />
+                    </a>
+                    {/* <a className="visit" href={project.url} >
+                        Visit Site
+                    </a> */}
+                </div>
             </div>
             <div className="tech-list">
                 {
