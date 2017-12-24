@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Scrollbar from '../../Scrollbar/Scrollbar';
+import AnimatedWrap from '../../AnimatedWrap';
 import './Projects.css';
 import personal from '../../assets/Personal Project Screenshot.PNG';
 import group from '../../assets/CodeWars Screenshot.PNG';
@@ -48,7 +49,7 @@ function Tech(tech) {
     )
 }
 
-export default class Projects extends Component {
+class Projects extends Component {
     constructor(props) {
         super(props)
         this.projects = [
@@ -125,3 +126,5 @@ export default class Projects extends Component {
         )
     }
 }
+
+export default AnimatedWrap(Projects)

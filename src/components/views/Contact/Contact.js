@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Scrollbar from '../../Scrollbar/Scrollbar';
+import AnimatedWrap from '../../AnimatedWrap';
 import LinkedIn from '../../assets/iconmonstr-linkedin-3.svg';
 import './Contact.css';
 
@@ -20,7 +21,7 @@ function Link(link) {
     )
 }
 
-export default class Contact extends Component {
+class Contact extends Component {
     constructor(props) {
         super(props)
         this.links = [
@@ -53,3 +54,5 @@ export default class Contact extends Component {
         )
     }
 }
+
+export default AnimatedWrap(Contact)

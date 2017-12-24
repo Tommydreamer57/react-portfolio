@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Scrollbar from '../../Scrollbar/Scrollbar'
+import Scrollbar from '../../Scrollbar/Scrollbar';
+import AnimatedWrap from '../../AnimatedWrap';
 import './Skills.css';
 import redux from '../../assets/Redux.svg';
 
@@ -31,7 +32,7 @@ function Skill(skill) {
     )
 }
 
-export default class Skills extends Component {
+class Skills extends Component {
     constructor(props) {
         super(props)
         this.skills = [
@@ -95,3 +96,5 @@ export default class Skills extends Component {
         )
     }
 }
+
+export default AnimatedWrap(Skills)

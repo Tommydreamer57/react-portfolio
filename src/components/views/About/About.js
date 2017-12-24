@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Scrollbar from '../../Scrollbar/Scrollbar';
+import AnimatedWrap from '../../AnimatedWrap';
 import './About.css';
 
 let i = 0
